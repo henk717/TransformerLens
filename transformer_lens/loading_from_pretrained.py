@@ -638,7 +638,7 @@ def get_official_model_name(model_name: str):
     Returns the official model name for a given model name (or alias).
     """
     model_alias_map = make_model_alias_map()
-    official_model_name = model_alias_map.get(model_name.lower(), None)
+    official_model_name = model_name.lower()
     if official_model_name is None:
         raise ValueError(
             f"{model_name} not found. Valid official model names (excl aliases): {OFFICIAL_MODEL_NAMES}"
